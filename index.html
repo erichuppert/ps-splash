@@ -17,12 +17,16 @@ $( document ).ready(function() {
 
 	var text = ["GOOGLE DOCS", "POWERPOINT", "PDF PRE-PRO BOOKS", "WORD DOCS", "DROPBOX", "GOOGLE DRIVE", ".XLS", "EMAIL ATTACHMENTS", "WIREDRIVE"];
 
+	var bye = ["SAYONARA", "TA TA", "ARRIVEDERCI", "CIAO", "HASTA LA VISTA", "ADIOS", "AU REVOIR", "SEEYA", "LATER", "TOODLES", "PEACE", "HAPPY TRAILS", "BRB", "TTYL", "SEE YOU AROUND", "THANKS FOR THE MEMORIES", "I GUESS THIS IS IT", "SO LONG", "FAREWELL", "WE HAD A GOOD RUN", "BON VOYAGE"];
+
     var counter = 0;
 
-    setInterval(change, 10000);
+    setInterval(change, 8000);
     function change() {
-     $(".competitors").fadeOut(function() {
-       $(this).text(text[counter]).fadeIn();
+     $("#bye").fadeOut(function() {
+     	tezt = '<span class="competitors">' + text[counter] + '</span>';
+     	byebye = bye[Math.floor(Math.random()*bye.length)] + " " + tezt;
+       $(this).html(byebye).fadeIn();
      });
         counter++;
         if(counter >= text.length) { counter = 0; }
@@ -60,15 +64,17 @@ $( document ).ready(function() {
 		var hiByeSizing = ($(window).width() * 0.04) 
 		var h3Sizine = ($(window).width() * 0.017)
 		var loginHeight = ($(window).width() * 0.0814)
-		var containerHeight = ($(window).width() * 2.233)
+		var containerHeight = ($(window).width() * 2.1)
 		var inputText = ($(window).width() * 0.0313)
 		var inputHeight = ($(window).width() * 0.0313)
+		var copyright = ($(window).width() * 0.01)
 		$('#bye, #request').css("fontSize", hiByeSizing);
 		$('h3').css("fontSize", h3Sizine);
-		$('p').css("fontSize", h3Sizine);
+		$('p, #login').css("fontSize", h3Sizine);
 		$('#login, input, .form-wrapper').css("height", loginHeight);
 		$("#container").css('height', containerHeight);
 		$('input').css("fontSize", inputText);
+		$('#copyright').css("fontSize", copyright);
 	}
 	$(window).on("load", function() {
 		byeSize();
@@ -81,46 +87,48 @@ $( document ).ready(function() {
 </script>
 </head>
 <body>
-	<div id="login"></div>
+	<div id="login"><span>Beta Login</span></div>
 <div id="container">
 	<img id="hero_logo" src="pslogo.png">
-	<img id="comp" src="comp.png">
+	<img id="comp" src="comp2.png">
 	<h2 id="bye">AU REVOIR <span class="competitors">WIREDRIVE</span></h2>
 	<div class="feature">
-		<img class="thumb" src="feature1.png">
+		<img class="thumb" src="feature11.png">
 		<img class="icon" src="icon1.png">
 		<h3>ALL YOUR DOCS, ONE PLACE</h3>
-		<p>Production Sensei provides an elegant interface for production professionals to track ALL shoot related assets, from casting videos to personnel list, in one convenient place.</p>
+		<p>Production Sensei provides an elegant interface for production professionals to track ALL shoot related assets, from casting videos to prop photos and personnel list, in one convenient place.</p>
 	</div>
 	<div class="feature">
-		<img class="thumb" src="feature1.png">
+		<img class="thumb" src="feature2.png">
 		<img class="icon" src="icon2.png">
 		<h3>BEAUTIFUL WEB PRESENTATIONS</h3>
 		<p>Production Sensei offers plug-and-play templates (customizable of course) that allow you to present LIVE to clients and update on the fly as your productions change. No more back-and-forth.</p>
 	</div>
 	<div class="feature">
-		<img class="thumb" src="feature1.png">
+		<img class="thumb" src="feature3.png">
 		<img class="icon" src="icon3.png">
 		<h3>"SAVE THE WORLD" STORAGE</h3>
 		<p>Tired of moving assets between Wiredrive, Dropbox, Google Drive, and email? Yeah, we know. Production Sensei’s storage allows you to SAVE THE WORLD (no limits), and also watch videos and edit images.</p>
 	</div>
 	<div class="feature">
-		<img class="thumb" src="feature1.png">
+		<img class="thumb" src="feature4.png">
 		<img class="icon" src="icon4.png">
 		<h3>REAL-TIME COLLABO</h3>
 		<p>Good productions require communication. By offering system-wide notifications (when images are added, videos are deleted, etc.) as well as simple chat and messaging, production professionals can focus on what matters.</p>
 	</div>
 	<div class="feature">
-		<img class="thumb" src="feature1.png">
+		<img class="thumb" src="feature5.png">
 		<img class="icon" src="icon5.png">
 		<h3>REAL-WORLD APPLICATIONS</h3>
-		<p>With Production Sensei, you populate scenes using your casting database, which stores all relevant photos + videos of each cast member (for as long as you want. Calendars track shoot days, personnel lists store personnel. No more nonsense.</p>
+		<p>With Production Sensei, you populate scenes using your casting database, which stores all relevant photos + videos of each cast member (for as long as you want). Calendars track shoot days, personnel lists store personnel. No more nonsense.</p>
 	</div>
 	<img id="btm_logo" src="pslogo.png">
 	<form class="form-wrapper">
 	<input type="text" placeholder="request invite"></input>
 	<button type="submit"><img id="btnimg" src="greenarrow.png"></button>
 	</form>
+	<div id="copyright">© 2014 Production Sensei. The Production Sensei name and its associated trade marks and logos are trade marks of Production Sensei.</br>
+Use of this website constitutes acceptance of the Terms of Use and Privacy and Cookie Policy.</div>
 </div>
 	
 </body>
