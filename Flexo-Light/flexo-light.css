@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'FlexoLight';
+    src: url('flexo-light.eot');
+    src: url('flexo-light.eot') format('embedded-opentype'),
+         url('flexo-light.woff2') format('woff2'),
+         url('flexo-light.woff') format('woff'),
+         url('flexo-light.ttf') format('truetype'),
+         url('flexo-light.svg#FlexoLight') format('svg');
+}

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'FlexoMedium';
+    src: url('flexo-medium.eot');
+    src: url('flexo-medium.eot') format('embedded-opentype'),
+         url('flexo-medium.woff2') format('woff2'),
+         url('flexo-medium.woff') format('woff'),
+         url('flexo-medium.ttf') format('truetype'),
+         url('flexo-medium.svg#FlexoMedium') format('svg');
+}
